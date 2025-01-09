@@ -8,6 +8,8 @@
 </head>
 <body>
     <h1>ABACUS INCREMENTAL</h1>
+	<br>
+	<button onClick = changeType()>Abacus Style: <span id = 'styleName'>Russian</span></button>
 	<style>
 		p {
   			font: large monospace
@@ -17,10 +19,11 @@
 		Total: <span id = 'points'>0</span>
 	<p>
 		<button onClick = upgrade() id = 'upButt'>Upgrade<br><span id = 'cost'>10</span></button><br>
+		<button onClick = double() id = 'dubButt'>Upgrade<br><span id = 'dubCost'>500</span></button><br>
 	<p>
-		|-----------|<br>
+		<span id = 'borders'>|-----------|</span><br>
 		<span id = 'abacus'></span>
-		|-----------|<br>
+		<span id = 'borders2'>|-----------|</span><br>
 	</p>
 	<button onClick = begin() id = 'startButt'>Start Counting</button><br>
 	<script charset="utf-8" src="main.js"></script>
