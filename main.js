@@ -30,12 +30,23 @@ const abacusLine = [// rusian abacus
 					"|00-00|0-|<br>",
 					"|0-000|0-|<br>",
 					"|-0000|0-|<br>",
-					"|0000-|0-|<br>",]
+					"|0000-|0-|<br>",],
+					// my own 'compact' abacus
+					['|0-|00-|-0|<br>',
+					 '|-0|00-|-0|<br>',
+					 '|0-|0-0|-0|<br>',
+					 '|-0|0-0|-0|<br>',
+					 '|0-|-00|-0|<br>',
+					 '|0-|00-|0-|<br>',
+					 '|-0|00-|0-|<br>',
+					 '|0-|0-0|0-|<br>',
+					 '|-0|0-0|0-|<br>',
+					 '|0-|-00|0-|<br>']
 				   ]; // 10
 let abacus = '';
 let type = 0;
 let borders = ['|-----------|', '|------|---|', '|-----|--|'];
-let points = 500;
+let points = 0;
 let pointArray = [0];
 let begone = false;
 let upgrades = 0;
@@ -105,12 +116,12 @@ function double() {
 };
 
 function changeType(){
-	if (type < 2){
+	if (type < 3){
 		type += 1;
 	} else {
 		type = 0;
 	};
-	let styleName = ['Russian', 'Chinese', 'Japanese'];
+	let styleName = ['Russian', 'Chinese', 'Japanese', 'Compact'];
 	abacusUpdate();
 	document.getElementById('styleName').innerHTML = styleName[type];
 	document.getElementById('borders').innerHTML = borders[type];
